@@ -1,0 +1,41 @@
+{
+  "accepted_docs": [
+    {
+      "file": "FLWC_A1_ARCHITECTURE_BLUEPRINT_V1_2026-07-09.md",
+      "sha256": "cf8d6d1bc83ce2889d9ac69df8771e6dfb1b64f3a36dadfee2517725bda81267"
+    },
+    {
+      "file": "FLWC_A2_SOURCE_LICENSE_MANIFEST_CONTRACTS_V1_2026-07-09.md",
+      "sha256": "2956877fa4a5a4a32ad8eca61dde9982b2a7508d6eb591dc366cd67c464ffcef"
+    },
+    {
+      "file": "FLWC_A3_RAW_EVIDENCE_CLAIM_EVENT_SCHEMAS_V1_2026-07-09.md",
+      "sha256": "37ad877b3075fbf59bebada34d162e2b4893338f62ec1d9391315656ab1e2b76"
+    },
+    {
+      "file": "FLWC_A4_CANDIDATE_EVIDENCE_PACKAGE_CONTRACT_V1_2026-07-09.md",
+      "sha256": "ff6b239f3fbed50b7dc05f55a83001f24124d0c0f265bb02b8c439760f933ab4"
+    },
+    {
+      "file": "FLWC_A5_VALIDATOR_REFUSAL_MATRIX_V1_2026-07-09.md",
+      "sha256": "e4cdd6e9ece45aa076f23c045efc91393efbfdcb5f9eeec2a88c0c22402f5577"
+    },
+    {
+      "file": "WS_FLWC_ENGINEERING_CONSTITUTION_STANDALONE_DOCS_ONLY_2026-06-13.md",
+      "sha256": "cfba5fcf1cab9fd6e37dc1c754436e087e1a39f1afc3a9c45b446620f4f7aecf"
+    }
+  ],
+  "node_id": "P620_FLWC_B0_TYPED_SCHEMA_PACKAGE_FIXTURE_ONLY_REPO_BOOTSTRAP_CONTROLLED_WRITE_V1",
+  "non_claims": [
+    "fixture_only",
+    "not_source_ingestion",
+    "not_model_call_authority",
+    "not_runtime_authority",
+    "not_market_data_authority",
+    "not_trade_signal",
+    "not_order_intent",
+    "not_position_sizing"
+  ],
+  "repo_root": "/data/strategy/flwc",
+  "schema_version": "FLWCSourceAuthorityArchiveManifestB0V1"
+}
