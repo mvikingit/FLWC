@@ -12,6 +12,13 @@ class ValidatorStatus(str, Enum):
     NEUTRALIZE = "NEUTRALIZE"
 
 
+@dataclass(frozen=True)
+class SchemaIssue:
+    reason_code: str
+    field_refs: tuple[str, ...]
+    detail: str = ""
+
+
 B0_VALIDATOR_VERSION = "FLWC-B0-FixtureValidator-0.0.0"
 B0_VALIDATOR_RUN_ID = "flwc-b0-fixture-validator-run-001"
 B0_VALIDATOR_RUN_NS = 1

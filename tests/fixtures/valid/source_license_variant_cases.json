@@ -1,0 +1,18 @@
+[
+  {
+    "case_id": "metadata_only_license_accept",
+    "builder": "metadata_only",
+    "expected_result": "ACCEPT"
+  },
+  {
+    "case_id": "derived_only_license_accept",
+    "builder": "derived_only",
+    "expected_result": "ACCEPT"
+  },
+  {
+    "case_id": "human_review_required_license_hold",
+    "builder": "human_review_required",
+    "expected_result": "HOLD_REVIEW",
+    "expected_reason_code": "license_state_requires_review"
+  }
+]

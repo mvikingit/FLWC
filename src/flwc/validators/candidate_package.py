@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import json
-import re
 from collections.abc import Mapping
 from pathlib import Path
 from typing import Any
@@ -24,15 +23,7 @@ from flwc.schemas.common import (
     ValidatorSummary,
     ensure_strings,
 )
-
-
-SECRET_PATTERNS = (
-    re.compile(r"-----BEGIN [A-Z ]*PRIVATE KEY-----"),
-    re.compile(r"\bAKIA[0-9A-Z]{16}\b"),
-    re.compile(r"\bghp_[A-Za-z0-9_]{20,}\b"),
-    re.compile(r"\bsk-[A-Za-z0-9_-]{20,}\b"),
-    re.compile(r"\bxox[baprs]-[A-Za-z0-9-]{20,}\b"),
-)
+from flwc.validators.core import contains_secret_like_value
 
 FORBIDDEN_TRADE_FIELDS = frozenset(
     {
@@ -446,7 +437,7 @@ def _append_boundary_result(
 
 
 def _append_credential_leak_result(results: list[ValidatorResult], package: Mapping[str, Any]) -> None:
-    if _contains_secret_like_value(package):
+    if contains_secret_like_value(package):
         results.append(_reject(package, "credential_leak_validator", "secret_like_value_detected"))
         return
     results.append(_accept(package, "credential_leak_validator"))
@@ -608,11 +599,6 @@ def _issue_fields(issues: tuple[SchemaIssue, ...]) -> tuple[str, ...]:
 
 def _issue_detail(issues: tuple[SchemaIssue, ...]) -> str:
     return "; ".join(f"{','.join(issue.field_refs)}:{issue.detail}" for issue in issues)
-
-
-def _contains_secret_like_value(obj: Any) -> bool:
-    text = json.dumps(obj, sort_keys=True, ensure_ascii=False)
-    return any(pattern.search(text) for pattern in SECRET_PATTERNS)
 
 
 def _json_size_bytes(obj: Any) -> int | None:

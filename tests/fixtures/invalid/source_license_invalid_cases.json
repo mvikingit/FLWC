@@ -1,0 +1,159 @@
+[
+  {
+    "case_id": "missing_schema_version",
+    "target": "source",
+    "delete": [
+      "source_manifest.schema_version"
+    ],
+    "expected_result": "REJECT",
+    "expected_reason_code": "required_field_missing"
+  },
+  {
+    "case_id": "unsupported_schema_version",
+    "target": "source",
+    "set": {
+      "source_manifest.schema_version": "FLWCSourceManifestV9"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "schema_version_invalid"
+  },
+  {
+    "case_id": "missing_source_id",
+    "target": "source",
+    "delete": [
+      "source_manifest.source_id"
+    ],
+    "expected_result": "REJECT",
+    "expected_reason_code": "required_field_missing"
+  },
+  {
+    "case_id": "invalid_source_class",
+    "target": "source",
+    "set": {
+      "source_manifest.source_class": "synthetic_fixture_with_real_access"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "enum_value_invalid"
+  },
+  {
+    "case_id": "missing_license_manifest_ref",
+    "target": "pair",
+    "delete": [
+      "source_manifest.license_manifest_ref"
+    ],
+    "expected_result": "REJECT",
+    "expected_reason_code": "license_manifest_ref_missing"
+  },
+  {
+    "case_id": "source_id_mismatch",
+    "target": "pair",
+    "set": {
+      "license_manifest.source_id": "synthetic_source_mismatch"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "source_license_source_id_mismatch"
+  },
+  {
+    "case_id": "unknown_license_raw_storage_requested",
+    "target": "license",
+    "set": {
+      "license_manifest.license_state": "unknown",
+      "license_manifest.raw_storage_policy": "allowed_full_text"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "unknown_license_raw_storage_requested"
+  },
+  {
+    "case_id": "forbidden_license_state",
+    "target": "license",
+    "set": {
+      "license_manifest.license_state": "forbidden"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "forbidden_license_state"
+  },
+  {
+    "case_id": "expired_license_state",
+    "target": "license",
+    "set": {
+      "license_manifest.license_state": "expired"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "expired_license_state_for_new_promotion"
+  },
+  {
+    "case_id": "incompatible_rights_scope_and_raw_storage",
+    "target": "source",
+    "set": {
+      "source_manifest.rights_scope": "derived_artifacts_internal_only",
+      "source_manifest.raw_storage_policy": "allowed_full_text"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "rights_scope_raw_storage_incompatible"
+  },
+  {
+    "case_id": "missing_retention_policy",
+    "target": "license",
+    "delete": [
+      "license_manifest.retention_policy"
+    ],
+    "expected_result": "REJECT",
+    "expected_reason_code": "required_field_missing"
+  },
+  {
+    "case_id": "missing_required_source_timestamp",
+    "target": "source",
+    "delete": [
+      "source_manifest.source_timestamp_ns"
+    ],
+    "expected_result": "REJECT",
+    "expected_reason_code": "timestamp_field_missing_or_invalid"
+  },
+  {
+    "case_id": "silent_wall_clock_substitution_attempt",
+    "target": "source",
+    "set": {
+      "source_manifest.source_timestamp_policy": "ambiguous"
+    },
+    "expected_result": "HOLD_REVIEW",
+    "expected_reason_code": "timestamp_policy_ambiguous"
+  },
+  {
+    "case_id": "missing_required_raw_hash_reference",
+    "target": "source",
+    "set": {
+      "source_manifest.raw_text_hash_required": true
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "raw_text_hash_missing"
+  },
+  {
+    "case_id": "credential_like_value",
+    "target": "license",
+    "set": {
+      "license_manifest.credential_reference_policy": "sk-fixture-sentinel-0000000000"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "secret_like_value_detected"
+  },
+  {
+    "case_id": "missing_required_non_claims",
+    "target": "source",
+    "set": {
+      "source_manifest.non_claims": [
+        "synthetic_fixture_only"
+      ]
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "missing_mandatory_non_claims"
+  },
+  {
+    "case_id": "synthetic_fixture_claiming_real_source_status",
+    "target": "source",
+    "set": {
+      "source_manifest.source_class": "official_source"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "synthetic_fixture_scope_invalid"
+  }
+]

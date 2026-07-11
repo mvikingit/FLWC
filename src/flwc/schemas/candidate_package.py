@@ -5,6 +5,8 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import Any
 
+from flwc.schemas.common import SchemaIssue
+
 
 class PackageScope(str, Enum):
     SYNTHETIC_FIXTURE_ONLY = "synthetic_fixture_only"
@@ -103,13 +105,6 @@ MANDATORY_SYNTHETIC_NON_CLAIMS = (
     "not_real_source",
     "not_source_ingestion",
 )
-
-
-@dataclass(frozen=True)
-class SchemaIssue:
-    reason_code: str
-    field_refs: tuple[str, ...]
-    detail: str = ""
 
 
 @dataclass(frozen=True)
