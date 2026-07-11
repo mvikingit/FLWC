@@ -1,15 +1,17 @@
 # FLWC Node Queue
 
-Current node:
+Completed current node:
 
-- `P620_FLWC_CE_CCP_STATE_PACK_CODEX_A_IMPLEMENTATION_V1`
-- Purpose: create and commit the CE-CCP-FLWC Chief Engineer state pack and archive the exact CE-CCP-FLWC source document when the local SHA matches.
+- `FLWC_B1_SOURCE_LICENSE_SCHEMA_FIXTURE_EXPANSION_V1`
+- Status: accepted and pushed to remote main `cb8980280f3687f5e2d33addfc3c376c196d5df8`.
+- Scope: fixture-only A2-derived source/license schema, validator, fixture builder, and test expansion.
 
 Next candidate:
 
-- `B1_SOURCE_LICENSE_SCHEMA_FIXTURE_EXPANSION`
-- Purpose: synthetic source/license schema fixture expansion under A2 only.
-- Boundary: no real source ingestion, no vendor API, no paid source access, no web scraping.
+- `FLWC_B1_RAW_EVIDENCE_VAULT_SOURCE_DOCUMENT_INDEX_FIXTURE_EXPANSION_V1`
+- Status: recommended_only; not_started; not_authorized until Chief Engineer issues the next Codex prompt.
+- Purpose: next B1-series fixture-only expansion for raw evidence vault and source document index contracts.
+- Boundary: synthetic_fixture_only; no real source access; no source ingestion; no model call; no DuckDB seed; no runtime service; no console service; no trading/scanner/order/broker/position sizing.
 
 Future:
 
