@@ -1,0 +1,332 @@
+[
+  {
+    "case_id": "missing_schema_version",
+    "target": "claim",
+    "delete": [
+      "atomic_claim.schema_version"
+    ],
+    "expected_result": "REJECT",
+    "expected_reason_code": "required_field_missing"
+  },
+  {
+    "case_id": "unsupported_schema_version",
+    "target": "event",
+    "set": {
+      "financial_event.schema_version": "FLWCFinancialEventV9"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "schema_version_invalid"
+  },
+  {
+    "case_id": "missing_claim_id",
+    "target": "claim",
+    "delete": [
+      "atomic_claim.claim_id"
+    ],
+    "expected_result": "REJECT",
+    "expected_reason_code": "required_field_missing"
+  },
+  {
+    "case_id": "missing_event_id",
+    "target": "event",
+    "delete": [
+      "financial_event.event_id"
+    ],
+    "expected_result": "REJECT",
+    "expected_reason_code": "required_field_missing"
+  },
+  {
+    "case_id": "missing_source_doc_id",
+    "target": "claim",
+    "delete": [
+      "atomic_claim.source_document_id"
+    ],
+    "expected_result": "REJECT",
+    "expected_reason_code": "required_field_missing"
+  },
+  {
+    "case_id": "missing_source_span_ref",
+    "target": "claim",
+    "set": {
+      "atomic_claim.source_span_refs": []
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "required_list_empty"
+  },
+  {
+    "case_id": "missing_source_manifest_ref",
+    "target": "claim",
+    "delete": [
+      "atomic_claim.source_manifest_ref"
+    ],
+    "expected_result": "REJECT",
+    "expected_reason_code": "required_field_missing"
+  },
+  {
+    "case_id": "missing_claim_raw_storage_policy",
+    "target": "claim",
+    "delete": [
+      "atomic_claim.raw_storage_policy"
+    ],
+    "expected_result": "REJECT",
+    "expected_reason_code": "required_field_missing"
+  },
+  {
+    "case_id": "missing_claim_retention_policy",
+    "target": "claim",
+    "delete": [
+      "atomic_claim.retention_policy"
+    ],
+    "expected_result": "REJECT",
+    "expected_reason_code": "required_field_missing"
+  },
+  {
+    "case_id": "missing_claim_source_trust_tier",
+    "target": "claim",
+    "delete": [
+      "atomic_claim.source_trust_tier"
+    ],
+    "expected_result": "REJECT",
+    "expected_reason_code": "required_field_missing"
+  },
+  {
+    "case_id": "missing_claim_prompt_injection_flags",
+    "target": "claim",
+    "delete": [
+      "atomic_claim.prompt_injection_flags"
+    ],
+    "expected_result": "REJECT",
+    "expected_reason_code": "required_field_missing"
+  },
+  {
+    "case_id": "missing_license_manifest_ref",
+    "target": "event",
+    "set": {
+      "financial_event.license_manifest_refs": []
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "required_list_empty"
+  },
+  {
+    "case_id": "missing_event_raw_storage_policy",
+    "target": "event",
+    "delete": [
+      "financial_event.raw_storage_policy"
+    ],
+    "expected_result": "REJECT",
+    "expected_reason_code": "required_field_missing"
+  },
+  {
+    "case_id": "missing_event_retention_policy",
+    "target": "event",
+    "delete": [
+      "financial_event.retention_policy"
+    ],
+    "expected_result": "REJECT",
+    "expected_reason_code": "required_field_missing"
+  },
+  {
+    "case_id": "missing_event_source_trust_tier",
+    "target": "event",
+    "delete": [
+      "financial_event.source_trust_tier"
+    ],
+    "expected_result": "REJECT",
+    "expected_reason_code": "required_field_missing"
+  },
+  {
+    "case_id": "missing_event_prompt_injection_flags",
+    "target": "event",
+    "delete": [
+      "financial_event.prompt_injection_flags"
+    ],
+    "expected_result": "REJECT",
+    "expected_reason_code": "required_field_missing"
+  },
+  {
+    "case_id": "source_license_mismatch",
+    "target": "compiler_output",
+    "set": {
+      "license_manifest.source_id": "synthetic_source_mismatch"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "raw_evidence_pair_not_accepted"
+  },
+  {
+    "case_id": "raw_evidence_source_document_mismatch",
+    "target": "compiler_output",
+    "set": {
+      "atomic_claim.source_document_id": "synthetic_doc_mismatch"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "claim_event_ref_mismatch"
+  },
+  {
+    "case_id": "missing_required_source_timestamp",
+    "target": "claim",
+    "set": {
+      "atomic_claim.source_timestamp_ns": null
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "source_timestamp_missing"
+  },
+  {
+    "case_id": "available_from_after_source_cutoff",
+    "target": "compiler_output",
+    "set": {
+      "atomic_claim.available_from_ns": 1760000000000000999
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "available_from_after_source_cutoff"
+  },
+  {
+    "case_id": "missing_lineage_digest",
+    "target": "event",
+    "set": {
+      "financial_event.lineage_digest": ""
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "lineage_digest_missing"
+  },
+  {
+    "case_id": "missing_atomic_claim_refs",
+    "target": "event",
+    "set": {
+      "financial_event.evidence_claim_refs": []
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "required_list_empty"
+  },
+  {
+    "case_id": "invalid_claim_event_ref",
+    "target": "pair",
+    "set": {
+      "financial_event.evidence_claim_refs": [
+        "synthetic_claim_mismatch"
+      ]
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "claim_event_ref_mismatch"
+  },
+  {
+    "case_id": "future_outcome_field_present",
+    "target": "claim",
+    "set": {
+      "atomic_claim.future_outcome": "synthetic_forbidden_future_outcome"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "future_outcome_field_present"
+  },
+  {
+    "case_id": "trade_signal_field_present",
+    "target": "event",
+    "set": {
+      "financial_event.trade_signal": "synthetic_forbidden_trade_signal"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "trade_signal_field_present"
+  },
+  {
+    "case_id": "order_intent_field_present",
+    "target": "event",
+    "set": {
+      "financial_event.order_intent": "synthetic_forbidden_order_intent"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "order_intent_field_present"
+  },
+  {
+    "case_id": "position_target_field_present",
+    "target": "event",
+    "set": {
+      "financial_event.position_target": "synthetic_forbidden_position_target"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "position_target_field_present"
+  },
+  {
+    "case_id": "broker_execution_field_present",
+    "target": "event",
+    "set": {
+      "financial_event.execution_instruction": "synthetic_forbidden_execution_instruction"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "broker_execution_field_present"
+  },
+  {
+    "case_id": "raw_text_payload_field_present",
+    "target": "claim",
+    "set": {
+      "atomic_claim.raw_text": "synthetic inline text should be denied"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "raw_text_payload_field_present"
+  },
+  {
+    "case_id": "model_output_payload_field_present",
+    "target": "claim",
+    "set": {
+      "atomic_claim.model_output": "model text"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "raw_text_payload_field_present"
+  },
+  {
+    "case_id": "credential_like_value",
+    "target": "claim",
+    "set": {
+      "atomic_claim.claim_text_or_structured_predicate": "sk-fixture-sentinel-0000000000"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "secret_like_value_detected"
+  },
+  {
+    "case_id": "prompt_injection_carry_forward_inconsistency",
+    "target": "compiler_output",
+    "set": {
+      "raw_evidence_record.prompt_injection_flags": [
+        "prompt_injection_suspected"
+      ]
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "prompt_injection_quarantine_missing"
+  },
+  {
+    "case_id": "missing_mandatory_non_claims",
+    "target": "event",
+    "set": {
+      "financial_event.non_claims": [
+        "synthetic_fixture_only"
+      ]
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "missing_mandatory_non_claims"
+  },
+  {
+    "case_id": "synthetic_fixture_real_authority_status",
+    "target": "claim",
+    "set": {
+      "atomic_claim.status": "active"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "synthetic_fixture_scope_invalid"
+  },
+  {
+    "case_id": "confidence_score_truth_authority_field_present",
+    "target": "event",
+    "set": {
+      "financial_event.confidence_score_as_truth_authority": true
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "forbidden_boundary_field_present"
+  },
+  {
+    "case_id": "carry_forward_mismatch",
+    "target": "compiler_output",
+    "set": {
+      "atomic_claim.raw_storage_policy": "metadata_only"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "claim_event_carry_forward_mismatch"
+  }
+]

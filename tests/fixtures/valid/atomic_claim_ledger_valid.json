@@ -1,0 +1,39 @@
+{
+  "schema_version": "FLWCAtomicClaimLedgerV1",
+  "claim_ledger_id": "synthetic_atomic_claim_ledger_001",
+  "claim_ledger_version": "v1",
+  "source_cutoff_ns": 1760000000000000023,
+  "created_at_ns": 1760000000000000024,
+  "producer_id": "flwc-b1-claim-event-fixture-builder",
+  "producer_version": "0.0.0",
+  "claim_count": 1,
+  "claim_digest": "sha256:synthetic_claim_digest_001",
+  "input_evidence_refs": [
+    "synthetic_raw_evidence_record_001"
+  ],
+  "input_source_manifest_refs": [
+    "synthetic_source_manifest_001"
+  ],
+  "input_license_manifest_refs": [
+    "synthetic_license_manifest_001"
+  ],
+  "lineage_digest": "sha256:synthetic_claim_lineage_digest_001",
+  "validation_status": "ACCEPT",
+  "validator_summary_ref": null,
+  "non_claims": [
+    "synthetic_fixture_only",
+    "not_real_source",
+    "not_source_ingestion",
+    "not_truth_authority",
+    "not_truth_oracle",
+    "not_trade_signal",
+    "not_order_intent",
+    "not_position_sizing",
+    "not_runtime_authority",
+    "not_market_data_authority",
+    "not_calibrated_probability",
+    "not_execution_trigger",
+    "not_real_claim_ledger",
+    "not_real_event_table"
+  ]
+}

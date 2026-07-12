@@ -1,0 +1,433 @@
+{
+  "source_manifest": {
+    "schema_version": "FLWCSourceManifestV1",
+    "source_manifest_id": "synthetic_source_manifest_001",
+    "source_id": "synthetic_source_001",
+    "source_class": "synthetic_fixture",
+    "source_name": "Synthetic Fixture Source",
+    "source_owner_or_publisher": "FLWC B1 synthetic fixture",
+    "source_url_or_doc_id": "synthetic_doc_001",
+    "source_access_mode": "offline_fixture",
+    "source_trust_tier": "tier_4_manual_review_only",
+    "publisher_timestamp_policy": "fixture_timestamp_available",
+    "source_timestamp_policy": "fixture_timestamp_available",
+    "revision_policy": "fixture_revision_static",
+    "canonical_location_policy": "fixture_doc_id_only",
+    "license_manifest_ref": "synthetic_license_manifest_001",
+    "rights_scope": "research_internal_only",
+    "retention_policy": "synthetic_fixture_retention_internal_only",
+    "raw_storage_policy": "allowed_full_text",
+    "raw_text_hash_required": false,
+    "dedupe_hash_method": "sha256",
+    "revision_id": "synthetic_revision_001",
+    "source_language": "en",
+    "country_or_region": "synthetic_region",
+    "asset_class_scope": [
+      "synthetic_fixture"
+    ],
+    "prompt_injection_policy": "not_applicable_metadata_only",
+    "status": "accepted_metadata_only",
+    "publisher_timestamp_ns": 1760000000000000000,
+    "source_timestamp_ns": 1760000000000000000,
+    "ingest_timestamp_ns": 1760000000000000001,
+    "available_from_ns": 1760000000000000001,
+    "compiler_seen_at_ns": 1760000000000000001,
+    "created_at_ns": 1760000000000000002,
+    "updated_at_ns": 1760000000000000002,
+    "non_claims": [
+      "synthetic_fixture_only",
+      "not_real_source",
+      "not_source_ingestion",
+      "not_source_access_authority",
+      "not_license_authority",
+      "not_truth_authority",
+      "not_ingestion_authority",
+      "not_runtime_authority",
+      "not_trading_authority",
+      "not_trade_signal"
+    ],
+    "raw_text_hash": null
+  },
+  "license_manifest": {
+    "schema_version": "FLWCLicenseManifestV1",
+    "license_manifest_id": "synthetic_license_manifest_001",
+    "source_id": "synthetic_source_001",
+    "license_state": "allowed_full_text",
+    "rights_scope": "research_internal_only",
+    "raw_storage_policy": "allowed_full_text",
+    "retention_policy": "synthetic_fixture_retention_internal_only",
+    "redistribution_policy": "internal_only",
+    "derivative_policy": "derived_claims_allowed_internal",
+    "quote_policy": "synthetic_fixture_quotes_not_applicable",
+    "runtime_payload_policy": "raw_text_forbidden",
+    "paid_access_required": false,
+    "credential_required": false,
+    "credential_reference_policy": "no_credentials_required",
+    "pii_policy": "no_pii_in_synthetic_fixture",
+    "valid_from_ns": 1760000000000000000,
+    "valid_until_ns": null,
+    "review_owner": null,
+    "review_status": "not_required",
+    "refusal_reason": null,
+    "created_at_ns": 1760000000000000002,
+    "updated_at_ns": 1760000000000000002,
+    "non_claims": [
+      "synthetic_fixture_only",
+      "not_real_source",
+      "not_source_ingestion",
+      "not_license_authority",
+      "not_legal_advice",
+      "not_truth_authority",
+      "not_runtime_authority",
+      "not_trade_signal"
+    ]
+  },
+  "raw_evidence_vault_manifest": {
+    "schema_version": "FLWCRawEvidenceVaultManifestV1",
+    "vault_manifest_id": "synthetic_raw_evidence_vault_manifest_001",
+    "vault_scope": "synthetic_fixture_only",
+    "source_manifest_refs": [
+      "synthetic_source_manifest_001"
+    ],
+    "license_manifest_refs": [
+      "synthetic_license_manifest_001"
+    ],
+    "source_cutoff_ns": 1760000000000000013,
+    "created_at_ns": 1760000000000000014,
+    "producer_id": "flwc-b1-raw-evidence-fixture-builder",
+    "producer_version": "0.0.0",
+    "raw_storage_policy_summary": {
+      "synthetic_source_manifest_001": "allowed_full_text"
+    },
+    "retention_policy_summary": {
+      "synthetic_source_manifest_001": "synthetic_fixture_retention_internal_only"
+    },
+    "prompt_injection_policy_summary": {
+      "synthetic_source_manifest_001": "not_applicable_metadata_only"
+    },
+    "evidence_record_count": 1,
+    "evidence_record_hash_method": "sha256",
+    "evidence_record_digest": "sha256:synthetic_evidence_record_digest_001",
+    "lineage_digest": "sha256:synthetic_raw_evidence_lineage_digest_001",
+    "validation_status": "ACCEPT",
+    "validator_summary_ref": null,
+    "non_claims": [
+      "synthetic_fixture_only",
+      "not_real_source",
+      "not_source_ingestion",
+      "not_real_source_ingestion",
+      "not_license_authority",
+      "not_truth_authority",
+      "not_market_data_authority",
+      "not_runtime_authority",
+      "not_trading_authority",
+      "not_trade_signal",
+      "not_order_intent",
+      "not_position_sizing",
+      "not_claim_ledger",
+      "not_event_table"
+    ]
+  },
+  "raw_evidence_record": {
+    "schema_version": "FLWCRawEvidenceRecordV1",
+    "evidence_id": "synthetic_raw_evidence_record_001",
+    "source_manifest_ref": "synthetic_source_manifest_001",
+    "license_manifest_ref": "synthetic_license_manifest_001",
+    "source_id": "synthetic_source_001",
+    "source_class": "synthetic_fixture",
+    "source_trust_tier": "tier_4_manual_review_only",
+    "license_state": "allowed_full_text",
+    "rights_scope": "research_internal_only",
+    "raw_storage_policy": "allowed_full_text",
+    "retention_policy": "synthetic_fixture_retention_internal_only",
+    "source_url_or_doc_id": "synthetic_doc_001",
+    "source_revision_id": "synthetic_revision_001",
+    "source_document_id": "synthetic_doc_001",
+    "source_span_refs": [
+      "synthetic_doc_001#segment:000001"
+    ],
+    "raw_text_hash": "sha256:synthetic_raw_text_hash_001",
+    "raw_text_ref_policy": "synthetic_fixture_text_allowed",
+    "derived_text_hash": "sha256:synthetic_derived_text_hash_001",
+    "publisher_timestamp_ns": 1760000000000000000,
+    "source_timestamp_ns": 1760000000000000000,
+    "ingest_timestamp_ns": 1760000000000000001,
+    "available_from_ns": 1760000000000000001,
+    "compiler_seen_at_ns": 1760000000000000001,
+    "language": "en",
+    "country_or_region": "synthetic_region",
+    "asset_class_scope": [
+      "synthetic_fixture"
+    ],
+    "prompt_injection_flags": [],
+    "quarantine_status": "not_required",
+    "dedupe_hash": "sha256:synthetic_raw_evidence_dedupe_hash_001",
+    "lineage_digest": "sha256:synthetic_raw_evidence_lineage_digest_001",
+    "validation_status": "ACCEPT",
+    "non_claims": [
+      "synthetic_fixture_only",
+      "not_real_source",
+      "not_source_ingestion",
+      "not_real_source_ingestion",
+      "not_license_authority",
+      "not_truth_authority",
+      "not_market_data_authority",
+      "not_runtime_authority",
+      "not_trading_authority",
+      "not_trade_signal",
+      "not_order_intent",
+      "not_position_sizing",
+      "not_claim_ledger",
+      "not_event_table"
+    ]
+  },
+  "source_document_index": {
+    "schema_version": "FLWCSourceDocumentIndexV1",
+    "source_document_id": "synthetic_doc_001",
+    "source_manifest_ref": "synthetic_source_manifest_001",
+    "license_manifest_ref": "synthetic_license_manifest_001",
+    "document_identity_key": "synthetic_doc_001:synthetic_revision_001",
+    "revision_id": "synthetic_revision_001",
+    "language": "en",
+    "publisher_timestamp_ns": 1760000000000000000,
+    "source_timestamp_ns": 1760000000000000000,
+    "available_from_ns": 1760000000000000001,
+    "segment_count": 1,
+    "segment_hash_method": "sha256",
+    "segment_index_digest": "sha256:synthetic_segment_index_digest_001",
+    "document_hash": "sha256:synthetic_document_hash_001",
+    "raw_storage_policy": "allowed_full_text",
+    "retention_policy": "synthetic_fixture_retention_internal_only",
+    "source_trust_tier": "tier_4_manual_review_only",
+    "license_state": "allowed_full_text",
+    "rights_scope": "research_internal_only",
+    "prompt_injection_flags": [],
+    "validation_status": "ACCEPT",
+    "non_claims": [
+      "synthetic_fixture_only",
+      "not_real_source",
+      "not_source_ingestion",
+      "not_real_source_ingestion",
+      "not_license_authority",
+      "not_truth_authority",
+      "not_market_data_authority",
+      "not_runtime_authority",
+      "not_trading_authority",
+      "not_trade_signal",
+      "not_order_intent",
+      "not_position_sizing",
+      "not_claim_ledger",
+      "not_event_table"
+    ]
+  },
+  "atomic_claim_ledger": {
+    "schema_version": "FLWCAtomicClaimLedgerV1",
+    "claim_ledger_id": "synthetic_atomic_claim_ledger_001",
+    "claim_ledger_version": "v1",
+    "source_cutoff_ns": 1760000000000000023,
+    "created_at_ns": 1760000000000000024,
+    "producer_id": "flwc-b1-claim-event-fixture-builder",
+    "producer_version": "0.0.0",
+    "claim_count": 1,
+    "claim_digest": "sha256:synthetic_claim_digest_001",
+    "input_evidence_refs": [
+      "synthetic_raw_evidence_record_001"
+    ],
+    "input_source_manifest_refs": [
+      "synthetic_source_manifest_001"
+    ],
+    "input_license_manifest_refs": [
+      "synthetic_license_manifest_001"
+    ],
+    "lineage_digest": "sha256:synthetic_claim_lineage_digest_001",
+    "validation_status": "ACCEPT",
+    "validator_summary_ref": null,
+    "non_claims": [
+      "synthetic_fixture_only",
+      "not_real_source",
+      "not_source_ingestion",
+      "not_truth_authority",
+      "not_truth_oracle",
+      "not_trade_signal",
+      "not_order_intent",
+      "not_position_sizing",
+      "not_runtime_authority",
+      "not_market_data_authority",
+      "not_calibrated_probability",
+      "not_execution_trigger",
+      "not_real_claim_ledger",
+      "not_real_event_table"
+    ]
+  },
+  "atomic_claim": {
+    "schema_version": "FLWCAtomicClaimV1",
+    "claim_id": "synthetic_atomic_claim_001",
+    "claim_version": "v1",
+    "claim_type": "guidance_statement",
+    "claim_text_or_structured_predicate": "synthetic fixture predicate only",
+    "subject_entity_id": "synthetic_entity_001",
+    "predicate_id": "synthetic_guidance_update_predicate",
+    "object_value": {
+      "synthetic_value": "fixture_only"
+    },
+    "object_unit": null,
+    "time_scope": {
+      "as_of_ns": 1760000000000000000
+    },
+    "source_document_id": "synthetic_doc_001",
+    "source_span_refs": [
+      "synthetic_doc_001#segment:000001"
+    ],
+    "raw_evidence_refs": [
+      "synthetic_raw_evidence_record_001"
+    ],
+    "source_manifest_ref": "synthetic_source_manifest_001",
+    "license_manifest_ref": "synthetic_license_manifest_001",
+    "license_state": "allowed_full_text",
+    "rights_scope": "research_internal_only",
+    "raw_storage_policy": "allowed_full_text",
+    "retention_policy": "synthetic_fixture_retention_internal_only",
+    "source_trust_tier": "tier_4_manual_review_only",
+    "prompt_injection_flags": [],
+    "publisher_timestamp_ns": 1760000000000000000,
+    "source_timestamp_ns": 1760000000000000000,
+    "ingest_timestamp_ns": 1760000000000000001,
+    "available_from_ns": 1760000000000000001,
+    "compiler_seen_at_ns": 1760000000000000001,
+    "confidence_score": 0.0,
+    "extraction_method": "manual_fixture",
+    "model_ref": null,
+    "prompt_template_ref": null,
+    "human_review_ref": null,
+    "status": "proposed",
+    "superseded_by_claim_id": null,
+    "dispute_refs": [],
+    "lineage_digest": "sha256:synthetic_claim_lineage_digest_001",
+    "validation_status": "ACCEPT",
+    "non_claims": [
+      "synthetic_fixture_only",
+      "not_real_source",
+      "not_source_ingestion",
+      "not_truth_authority",
+      "not_truth_oracle",
+      "not_trade_signal",
+      "not_order_intent",
+      "not_position_sizing",
+      "not_runtime_authority",
+      "not_market_data_authority",
+      "not_calibrated_probability",
+      "not_execution_trigger",
+      "not_real_claim_ledger",
+      "not_real_event_table"
+    ]
+  },
+  "financial_event_table": {
+    "schema_version": "FLWCFinancialEventTableV1",
+    "event_table_id": "synthetic_financial_event_table_001",
+    "event_table_version": "v1",
+    "source_cutoff_ns": 1760000000000000023,
+    "created_at_ns": 1760000000000000024,
+    "producer_id": "flwc-b1-claim-event-fixture-builder",
+    "producer_version": "0.0.0",
+    "event_count": 1,
+    "event_digest": "sha256:synthetic_event_digest_001",
+    "input_claim_ledger_refs": [
+      "synthetic_atomic_claim_ledger_001"
+    ],
+    "input_source_manifest_refs": [
+      "synthetic_source_manifest_001"
+    ],
+    "input_license_manifest_refs": [
+      "synthetic_license_manifest_001"
+    ],
+    "lineage_digest": "sha256:synthetic_event_lineage_digest_001",
+    "validation_status": "ACCEPT",
+    "validator_summary_ref": null,
+    "non_claims": [
+      "synthetic_fixture_only",
+      "not_real_source",
+      "not_source_ingestion",
+      "not_truth_authority",
+      "not_truth_oracle",
+      "not_trade_signal",
+      "not_order_intent",
+      "not_position_sizing",
+      "not_runtime_authority",
+      "not_market_data_authority",
+      "not_calibrated_probability",
+      "not_execution_trigger",
+      "not_real_claim_ledger",
+      "not_real_event_table"
+    ]
+  },
+  "financial_event": {
+    "schema_version": "FLWCFinancialEventV1",
+    "event_id": "synthetic_financial_event_001",
+    "event_version": "v1",
+    "event_type": "guidance_update",
+    "event_time_ns": 1760000000000000000,
+    "publish_time_ns": 1760000000000000000,
+    "source_timestamp_ns": 1760000000000000000,
+    "available_from_ns": 1760000000000000001,
+    "compiler_seen_at_ns": 1760000000000000001,
+    "primary_entity_id": "synthetic_entity_001",
+    "asset_refs": [
+      "synthetic_asset_ref_001"
+    ],
+    "country_or_region": "synthetic_region",
+    "sector": "synthetic_sector",
+    "asset_class": "synthetic_fixture",
+    "evidence_claim_refs": [
+      "synthetic_atomic_claim_001"
+    ],
+    "source_document_refs": [
+      "synthetic_doc_001"
+    ],
+    "raw_evidence_refs": [
+      "synthetic_raw_evidence_record_001"
+    ],
+    "source_manifest_refs": [
+      "synthetic_source_manifest_001"
+    ],
+    "license_manifest_refs": [
+      "synthetic_license_manifest_001"
+    ],
+    "license_state_summary": {
+      "synthetic_license_manifest_001": "allowed_full_text"
+    },
+    "rights_scope_summary": {
+      "synthetic_license_manifest_001": "research_internal_only"
+    },
+    "raw_storage_policy": "allowed_full_text",
+    "retention_policy": "synthetic_fixture_retention_internal_only",
+    "source_trust_tier": "tier_4_manual_review_only",
+    "prompt_injection_flags": [],
+    "direction_candidate": "not_applicable",
+    "importance_score": null,
+    "surprise_score": null,
+    "novelty_score": null,
+    "uncertainty_score": null,
+    "confidence_score": 0.0,
+    "conflict_refs": [],
+    "status": "proposed",
+    "event_derivation_method": "claim_set_compiler",
+    "lineage_digest": "sha256:synthetic_event_lineage_digest_001",
+    "validation_status": "ACCEPT",
+    "non_claims": [
+      "synthetic_fixture_only",
+      "not_real_source",
+      "not_source_ingestion",
+      "not_truth_authority",
+      "not_truth_oracle",
+      "not_trade_signal",
+      "not_order_intent",
+      "not_position_sizing",
+      "not_runtime_authority",
+      "not_market_data_authority",
+      "not_calibrated_probability",
+      "not_execution_trigger",
+      "not_real_claim_ledger",
+      "not_real_event_table"
+    ]
+  }
+}
