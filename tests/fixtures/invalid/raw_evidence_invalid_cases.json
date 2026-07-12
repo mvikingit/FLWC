@@ -1,0 +1,209 @@
+[
+  {
+    "case_id": "missing_schema_version",
+    "target": "vault",
+    "delete": [
+      "raw_evidence_vault_manifest.schema_version"
+    ],
+    "expected_result": "REJECT",
+    "expected_reason_code": "required_field_missing"
+  },
+  {
+    "case_id": "unsupported_schema_version",
+    "target": "index",
+    "set": {
+      "source_document_index.schema_version": "FLWCSourceDocumentIndexV9"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "schema_version_invalid"
+  },
+  {
+    "case_id": "missing_vault_manifest_id",
+    "target": "vault",
+    "delete": [
+      "raw_evidence_vault_manifest.vault_manifest_id"
+    ],
+    "expected_result": "REJECT",
+    "expected_reason_code": "required_field_missing"
+  },
+  {
+    "case_id": "missing_source_document_id",
+    "target": "index",
+    "delete": [
+      "source_document_index.source_document_id"
+    ],
+    "expected_result": "REJECT",
+    "expected_reason_code": "required_field_missing"
+  },
+  {
+    "case_id": "missing_source_manifest_ref",
+    "target": "record",
+    "delete": [
+      "raw_evidence_record.source_manifest_ref"
+    ],
+    "expected_result": "REJECT",
+    "expected_reason_code": "required_field_missing"
+  },
+  {
+    "case_id": "missing_license_manifest_ref",
+    "target": "index",
+    "delete": [
+      "source_document_index.license_manifest_ref"
+    ],
+    "expected_result": "REJECT",
+    "expected_reason_code": "required_field_missing"
+  },
+  {
+    "case_id": "source_license_mismatch",
+    "target": "pair",
+    "set": {
+      "license_manifest.source_id": "synthetic_source_mismatch"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "source_license_pair_not_accepted"
+  },
+  {
+    "case_id": "missing_required_source_timestamp",
+    "target": "record",
+    "delete": [
+      "raw_evidence_record.source_timestamp_ns"
+    ],
+    "expected_result": "REJECT",
+    "expected_reason_code": "source_timestamp_missing"
+  },
+  {
+    "case_id": "missing_available_from_ns",
+    "target": "index",
+    "delete": [
+      "source_document_index.available_from_ns"
+    ],
+    "expected_result": "REJECT",
+    "expected_reason_code": "required_field_missing"
+  },
+  {
+    "case_id": "available_from_after_source_cutoff",
+    "target": "pair",
+    "set": {
+      "raw_evidence_record.available_from_ns": 1760000000000000999
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "available_from_after_source_cutoff"
+  },
+  {
+    "case_id": "missing_raw_text_hash",
+    "target": "record",
+    "set": {
+      "raw_evidence_record.raw_text_hash": null
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "raw_text_hash_missing"
+  },
+  {
+    "case_id": "missing_document_hash",
+    "target": "index",
+    "set": {
+      "source_document_index.document_hash": null
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "document_hash_missing"
+  },
+  {
+    "case_id": "raw_storage_policy_incompatible_with_license_state",
+    "target": "record",
+    "set": {
+      "raw_evidence_record.license_state": "unknown",
+      "raw_evidence_record.raw_storage_policy": "allowed_full_text"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "raw_storage_policy_incompatible_with_license_state"
+  },
+  {
+    "case_id": "missing_retention_policy_summary",
+    "target": "vault",
+    "delete": [
+      "raw_evidence_vault_manifest.retention_policy_summary"
+    ],
+    "expected_result": "REJECT",
+    "expected_reason_code": "required_field_missing"
+  },
+  {
+    "case_id": "invalid_source_span_ref",
+    "target": "record",
+    "set": {
+      "raw_evidence_record.source_span_refs": [
+        "synthetic_doc_001#segment:1"
+      ]
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "source_span_ref_invalid"
+  },
+  {
+    "case_id": "source_span_ref_out_of_range",
+    "target": "pair",
+    "set": {
+      "raw_evidence_record.source_span_refs": [
+        "synthetic_doc_001#segment:000002"
+      ]
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "source_document_segment_ref_invalid"
+  },
+  {
+    "case_id": "missing_lineage_digest",
+    "target": "record",
+    "set": {
+      "raw_evidence_record.lineage_digest": ""
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "lineage_digest_missing"
+  },
+  {
+    "case_id": "credential_like_value",
+    "target": "record",
+    "set": {
+      "raw_evidence_record.source_url_or_doc_id": "sk-fixture-sentinel-0000000000"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "secret_like_value_detected"
+  },
+  {
+    "case_id": "prompt_injection_without_quarantine",
+    "target": "record",
+    "set": {
+      "raw_evidence_record.prompt_injection_flags": [
+        "prompt_injection_suspected"
+      ]
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "prompt_injection_quarantine_missing"
+  },
+  {
+    "case_id": "missing_mandatory_non_claims",
+    "target": "index",
+    "set": {
+      "source_document_index.non_claims": [
+        "synthetic_fixture_only"
+      ]
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "missing_mandatory_non_claims"
+  },
+  {
+    "case_id": "synthetic_fixture_claiming_future_source_scope",
+    "target": "vault",
+    "set": {
+      "raw_evidence_vault_manifest.vault_scope": "authorized_source_future_node_only"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "synthetic_fixture_scope_invalid"
+  },
+  {
+    "case_id": "forbidden_claim_event_runtime_field",
+    "target": "record",
+    "set": {
+      "raw_evidence_record.claim_id": "synthetic_claim_attempt"
+    },
+    "expected_result": "REJECT",
+    "expected_reason_code": "forbidden_boundary_field_present"
+  }
+]

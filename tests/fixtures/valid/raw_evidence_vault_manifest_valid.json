@@ -1,0 +1,46 @@
+{
+  "schema_version": "FLWCRawEvidenceVaultManifestV1",
+  "vault_manifest_id": "synthetic_raw_evidence_vault_manifest_001",
+  "vault_scope": "synthetic_fixture_only",
+  "source_manifest_refs": [
+    "synthetic_source_manifest_001"
+  ],
+  "license_manifest_refs": [
+    "synthetic_license_manifest_001"
+  ],
+  "source_cutoff_ns": 1760000000000000013,
+  "created_at_ns": 1760000000000000014,
+  "producer_id": "flwc-b1-raw-evidence-fixture-builder",
+  "producer_version": "0.0.0",
+  "raw_storage_policy_summary": {
+    "synthetic_source_manifest_001": "allowed_full_text"
+  },
+  "retention_policy_summary": {
+    "synthetic_source_manifest_001": "synthetic_fixture_retention_internal_only"
+  },
+  "prompt_injection_policy_summary": {
+    "synthetic_source_manifest_001": "not_applicable_metadata_only"
+  },
+  "evidence_record_count": 1,
+  "evidence_record_hash_method": "sha256",
+  "evidence_record_digest": "sha256:synthetic_evidence_record_digest_001",
+  "lineage_digest": "sha256:synthetic_raw_evidence_lineage_digest_001",
+  "validation_status": "ACCEPT",
+  "validator_summary_ref": null,
+  "non_claims": [
+    "synthetic_fixture_only",
+    "not_real_source",
+    "not_source_ingestion",
+    "not_real_source_ingestion",
+    "not_license_authority",
+    "not_truth_authority",
+    "not_market_data_authority",
+    "not_runtime_authority",
+    "not_trading_authority",
+    "not_trade_signal",
+    "not_order_intent",
+    "not_position_sizing",
+    "not_claim_ledger",
+    "not_event_table"
+  ]
+}
