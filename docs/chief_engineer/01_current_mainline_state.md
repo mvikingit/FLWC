@@ -24,25 +24,25 @@ Accepted B0 state:
 - B0 remote push accepted.
 - B0 remains fixture-only typed schema / validator work, not runtime or data authority.
 
-Current accepted remote main: `912f9efe1f0acabe0760fefcade84be9d89b1b7a`
+Current accepted remote main: `96f40bac6de2dcd9f12ac4bbfe8d6c2751a85ae4`
 
 Most recent accepted node:
 
-- `FLWC_B1_RAW_EVIDENCE_VAULT_SOURCE_DOCUMENT_INDEX_FIXTURE_EXPANSION_V1`
-- Remote main accepted at `912f9efe1f0acabe0760fefcade84be9d89b1b7a`.
-- Accepted code commit: `912f9efe1f0acabe0760fefcade84be9d89b1b7a`.
-- Related repair: `FLWC_B1_RAW_EVIDENCE_INLINE_RAW_TEXT_PAYLOAD_DENIAL_REPAIR_R1`.
-- Codex B audit: `FLWC_B1_RAW_EVIDENCE_VAULT_SOURCE_DOCUMENT_INDEX_FIXTURE_EXPANSION_V1_CODEX_B_RO_REAUDIT_R2` returned `ACCEPT_AUDIT`; repaired blocker resolved; campaign progress validated.
-- Push gate: `FLWC_B1_RAW_EVIDENCE_VAULT_SOURCE_DOCUMENT_INDEX_FIXTURE_EXPANSION_V1_REMOTE_PUSH_GATE_V1` completed.
-- Test evidence: full pytest `39 passed, 53 subtests`; `git diff --check` passed.
-- Campaign artifact: executable synthetic raw-evidence packet seam with `FLWCRawEvidenceVaultManifestV1`, `FLWCRawEvidenceRecordV1`, `FLWCSourceDocumentIndexV1`, deterministic validators, deterministic fixture builders, valid/invalid fixture packet corpus, and fail-closed inline raw/source/full-text payload denial.
+- `FLWC_B1_CLAIM_EVENT_SYNTHETIC_COMPILER_SKELETON_V1`
+- Remote main accepted at `96f40bac6de2dcd9f12ac4bbfe8d6c2751a85ae4`.
+- Accepted code commit: `96f40bac6de2dcd9f12ac4bbfe8d6c2751a85ae4`.
+- Related repair: `FLWC_B1_CLAIM_EVENT_AUDIT_BLOCKER_REPAIR_R1`.
+- Codex B audit: `FLWC_B1_CLAIM_EVENT_SYNTHETIC_COMPILER_SKELETON_V1_CODEX_B_RO_REAUDIT_R2` returned `ACCEPT_AUDIT`; repaired blockers resolved; campaign progress validated.
+- Push gate: `FLWC_B1_CLAIM_EVENT_SYNTHETIC_COMPILER_SKELETON_V1_COMMIT_PUSH_GATE_V1` completed.
+- Test evidence: full pytest `50 passed, 97 subtests`; `git diff --check` passed.
+- Campaign artifact: executable synthetic claim/event compiler seam with `FLWCAtomicClaimV1`, `FLWCAtomicClaimLedgerV1`, `FLWCFinancialEventV1`, `FLWCFinancialEventTableV1`, deterministic validators, deterministic synthetic compiler builders, valid/invalid fixture corpus, model-output payload denial, and A3 carry-forward fields on claim/event artifacts.
 
 ```text
-FLWC_B1_RAW_EVIDENCE_VAULT_SOURCE_DOCUMENT_INDEX_FIXTURE_EXPANSION_REMOTE_ACCEPTED = true
-FLWC_B1_RAW_EVIDENCE_VAULT_SOURCE_DOCUMENT_INDEX_FIXTURE_EXPANSION_ACCEPTED_REMOTE_MAIN = 912f9efe1f0acabe0760fefcade84be9d89b1b7a
+FLWC_B1_CLAIM_EVENT_SYNTHETIC_COMPILER_SKELETON_REMOTE_ACCEPTED = true
+FLWC_B1_CLAIM_EVENT_SYNTHETIC_COMPILER_SKELETON_ACCEPTED_REMOTE_MAIN = 96f40bac6de2dcd9f12ac4bbfe8d6c2751a85ae4
 ```
 
-Current next recommended node: `FLWC_B1_CLAIM_EVENT_SYNTHETIC_COMPILER_SKELETON_V1` recommended only; not started; not authorized until Chief Engineer issues the next Codex prompt.
+Current next recommended node: `FLWC_B2_VALIDATOR_SUITE_EXPANSION_V1` recommended only; not started; not authorized until Chief Engineer issues the next Codex prompt.
 
 Current non-claims:
 
@@ -58,5 +58,6 @@ Current non-claims:
 - not trading/scanner/order/position
 - not claim ledger real authority
 - not event table real authority
+- model output not truth authority
 - local LLM output not truth authority
 - candidate package not truth authority
