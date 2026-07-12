@@ -2,16 +2,17 @@
 
 Completed current node:
 
-- `FLWC_B1_SOURCE_LICENSE_SCHEMA_FIXTURE_EXPANSION_V1`
-- Status: accepted and pushed to remote main `cb8980280f3687f5e2d33addfc3c376c196d5df8`.
-- Scope: fixture-only A2-derived source/license schema, validator, fixture builder, and test expansion.
+- `FLWC_B1_RAW_EVIDENCE_VAULT_SOURCE_DOCUMENT_INDEX_FIXTURE_EXPANSION_V1`
+- Status: accepted and pushed to remote main `912f9efe1f0acabe0760fefcade84be9d89b1b7a`.
+- Scope: fixture-only A3-derived raw evidence vault, raw evidence record, source document index, validator, fixture builder, and test expansion.
+- Campaign artifact: executable synthetic raw-evidence packet seam with inline raw/source/full-text payload denial.
 
 Next candidate:
 
-- `FLWC_B1_RAW_EVIDENCE_VAULT_SOURCE_DOCUMENT_INDEX_FIXTURE_EXPANSION_V1`
+- `FLWC_B1_CLAIM_EVENT_SYNTHETIC_COMPILER_SKELETON_V1`
 - Status: recommended_only; not_started; not_authorized until Chief Engineer issues the next Codex prompt.
-- Purpose: next B1-series fixture-only expansion for raw evidence vault and source document index contracts.
-- Boundary: synthetic_fixture_only; no real source access; no source ingestion; no model call; no DuckDB seed; no runtime service; no console service; no trading/scanner/order/broker/position sizing.
+- Purpose: first consumer of the raw-evidence packet seam; synthetic claim/event compiler skeleton only.
+- Boundary: synthetic_fixture_only; no real source data; no source ingestion; no model extraction; no financial event truth; no DuckDB seed; no runtime service; no console service; no trading/scanner/order/broker/position sizing.
 
 Future:
 
