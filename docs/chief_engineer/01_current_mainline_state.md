@@ -24,25 +24,24 @@ Accepted B0 state:
 - B0 remote push accepted.
 - B0 remains fixture-only typed schema / validator work, not runtime or data authority.
 
-Current accepted remote main: `96f40bac6de2dcd9f12ac4bbfe8d6c2751a85ae4`
+Current accepted remote main: `bee3a86f452a53f08dc4e66fdfd60064a496496b`
 
 Most recent accepted node:
 
-- `FLWC_B1_CLAIM_EVENT_SYNTHETIC_COMPILER_SKELETON_V1`
-- Remote main accepted at `96f40bac6de2dcd9f12ac4bbfe8d6c2751a85ae4`.
-- Accepted code commit: `96f40bac6de2dcd9f12ac4bbfe8d6c2751a85ae4`.
-- Related repair: `FLWC_B1_CLAIM_EVENT_AUDIT_BLOCKER_REPAIR_R1`.
-- Codex B audit: `FLWC_B1_CLAIM_EVENT_SYNTHETIC_COMPILER_SKELETON_V1_CODEX_B_RO_REAUDIT_R2` returned `ACCEPT_AUDIT`; repaired blockers resolved; campaign progress validated.
-- Push gate: `FLWC_B1_CLAIM_EVENT_SYNTHETIC_COMPILER_SKELETON_V1_COMMIT_PUSH_GATE_V1` completed.
-- Test evidence: full pytest `50 passed, 97 subtests`; `git diff --check` passed.
-- Campaign artifact: executable synthetic claim/event compiler seam with `FLWCAtomicClaimV1`, `FLWCAtomicClaimLedgerV1`, `FLWCFinancialEventV1`, `FLWCFinancialEventTableV1`, deterministic validators, deterministic synthetic compiler builders, valid/invalid fixture corpus, model-output payload denial, and A3 carry-forward fields on claim/event artifacts.
+- `FLWC_B2_VALIDATOR_SUITE_EXPANSION_V1`
+- Remote main accepted at `bee3a86f452a53f08dc4e66fdfd60064a496496b`.
+- Accepted code commit: `bee3a86f452a53f08dc4e66fdfd60064a496496b`.
+- Codex B audit: `FLWC_B2_VALIDATOR_SUITE_EXPANSION_V1_CODEX_B_RO_AUDIT_V1` returned `ACCEPT_AUDIT`; campaign progress validated.
+- Push gate: `FLWC_B2_VALIDATOR_SUITE_EXPANSION_V1_COMMIT_PUSH_GATE_V1` completed.
+- Test evidence: full pytest `58 passed, 105 subtests`; `git diff --check` passed.
+- Campaign artifact: executable deterministic validator suite with `validate_fixture_suite_packet()`, `FLWCRefusalRecordV1`, reused `FLWCValidatorResultV1`, reused `FLWCValidatorSummaryV1`, deterministic suite fixture builders, refusal record generation, validator summary generation, full-chain validation from source/license through raw evidence and claim/event, and A5 aggregation proof `REJECT > HOLD_REVIEW > NEUTRALIZE > ACCEPT`.
 
 ```text
-FLWC_B1_CLAIM_EVENT_SYNTHETIC_COMPILER_SKELETON_REMOTE_ACCEPTED = true
-FLWC_B1_CLAIM_EVENT_SYNTHETIC_COMPILER_SKELETON_ACCEPTED_REMOTE_MAIN = 96f40bac6de2dcd9f12ac4bbfe8d6c2751a85ae4
+FLWC_B2_VALIDATOR_SUITE_EXPANSION_REMOTE_ACCEPTED = true
+FLWC_B2_VALIDATOR_SUITE_EXPANSION_ACCEPTED_REMOTE_MAIN = bee3a86f452a53f08dc4e66fdfd60064a496496b
 ```
 
-Current next recommended node: `FLWC_B2_VALIDATOR_SUITE_EXPANSION_V1` recommended only; not started; not authorized until Chief Engineer issues the next Codex prompt.
+Current next recommended node: `FLWC_B3_SEALED_SYNTHETIC_SNAPSHOT_V1` recommended only; not started; not authorized until Chief Engineer issues the next Codex prompt.
 
 Current non-claims:
 
@@ -59,5 +58,7 @@ Current non-claims:
 - not claim ledger real authority
 - not event table real authority
 - model output not truth authority
+- not snapshot sealing real authority
+- not wiki export authority
 - local LLM output not truth authority
 - candidate package not truth authority

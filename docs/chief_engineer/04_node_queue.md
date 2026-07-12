@@ -2,17 +2,17 @@
 
 Completed current node:
 
-- `FLWC_B1_CLAIM_EVENT_SYNTHETIC_COMPILER_SKELETON_V1`
-- Status: accepted and pushed to remote main `96f40bac6de2dcd9f12ac4bbfe8d6c2751a85ae4`.
-- Scope: fixture-only A3-derived atomic claim, claim ledger, financial event, event table, validator, synthetic compiler builder, and test expansion.
-- Campaign artifact: executable synthetic claim/event compiler seam with model-output payload denial and A3 carry-forward fields.
+- `FLWC_B2_VALIDATOR_SUITE_EXPANSION_V1`
+- Status: accepted and pushed to remote main `bee3a86f452a53f08dc4e66fdfd60064a496496b`.
+- Scope: fixture-only deterministic validator suite expansion over B1 source/license, raw-evidence, and claim/event artifacts.
+- Campaign artifact: executable validator-suite runner with refusal records, validator summaries, full-chain fixture-suite builders, and A5 aggregation proof.
 
 Next candidate:
 
-- `FLWC_B2_VALIDATOR_SUITE_EXPANSION_V1`
+- `FLWC_B3_SEALED_SYNTHETIC_SNAPSHOT_V1`
 - Status: recommended_only; not_started; not_authorized until Chief Engineer issues the next Codex prompt.
-- Purpose: first consumer of the source/license, raw-evidence, and claim/event seams; unify and expand deterministic validators across A2/A3/A4/A5 families; prepare for B3 sealed synthetic snapshot.
-- Boundary: synthetic_fixture_only; no real source data; no source adapter; no source ingestion; no model extraction; no DuckDB seed; no runtime service; no console service; no trading/scanner/order/broker/position sizing.
+- Purpose: consume B2 validator-suite output; create sealed synthetic snapshot fixture; prove immutable snapshot package and lineage/checksum envelope.
+- Boundary: recommended_only; synthetic_fixture_only; no real source data; no source adapter; no source ingestion; no model extraction; no DuckDB seed; no runtime service; no console service; no wiki export; no trading/scanner/order/broker/position sizing.
 
 Future:
 
